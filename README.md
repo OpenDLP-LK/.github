@@ -155,9 +155,3 @@ Use the GitHub [Discussions](https://github.com/<your-username>/OpenDLP-LK/discu
 
 This initiative is inspired by the **Personal Data Protection Act (PDPA) No. 9 of 2022 (Sri Lanka)**
 and aims to support local organizations in achieving compliance through **education, templates, and community-driven collaboration**.
-
----
----
-
-Would you like me to generate a matching **`LICENSE` (MIT)** and **`CONTRIBUTING.md`** file next — so your repository will be fully ready for publishing on GitHub Pages?
-```
