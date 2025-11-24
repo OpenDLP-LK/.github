@@ -1,0 +1,178 @@
+# GitHub Discussions Categories Configuration
+# This file defines the discussion categories for the OpenDLP-LK organization
+# Can be used to programmatically create or update discussion categories via GitHub API
+
+categories:
+  - name: "PDPA Compliance"
+    emoji: ":shield:"
+    description: "Discussions about Personal Data Protection Act (PDPA) compliance, regulations, and best practices specific to Sri Lanka"
+    slug: "pdpa-compliance"
+    is_answerable: true
+    
+  - name: "Data Patterns"
+    emoji: ":mag:"
+    description: "Share and discuss Sri Lankan-specific data patterns for DLP implementation (NIC, banking, passports, etc.)"
+    slug: "data-patterns"
+    is_answerable: true
+    
+  - name: "DLP Workflow"
+    emoji: ":gear:"
+    description: "Technical discussions about DLP workflow implementation, monitoring, and operations"
+    slug: "dlp-workflow"
+    is_answerable: true
+    
+  - name: "Implementation Support"
+    emoji: ":rocket:"
+    description: "Get help with implementing DLP solutions in your organization"
+    slug: "implementation-support"
+    is_answerable: true
+    
+  - name: "Data Champions Program"
+    emoji: ":bulb:"
+    description: "Community support and resources for Data Champions - training, certification, and best practices"
+    slug: "data-champions"
+    is_answerable: false
+    
+  - name: "General"
+    emoji: ":speech_balloon:"
+    description: "General discussions about DLP, data security, and community topics"
+    slug: "general"
+    is_answerable: false
+    
+  - name: "Announcements"
+    emoji: ":mega:"
+    description: "Official announcements from the OpenDLP-LK team"
+    slug: "announcements"
+    is_answerable: false
+
+# Category Guidelines
+
+guidelines:
+  pdpa-compliance:
+    - "Questions about PDPA requirements and interpretation"
+    - "Compliance checklists and audit guidance"
+    - "Privacy policies and procedures"
+    - "NOT for specific legal advice - consult an attorney"
+    
+  data-patterns:
+    - "Share new Sri Lankan data patterns"
+    - "Discuss pattern validation and accuracy"
+    - "Report false positives/negatives"
+    - "ALWAYS use sanitized examples - no real personal data"
+    
+  dlp-workflow:
+    - "Technical DLP implementation questions"
+    - "Configuration and integration help"
+    - "Troubleshooting and optimization"
+    - "Sanitize sensitive information before posting"
+    
+  implementation-support:
+    - "Deployment planning and strategy"
+    - "Tool selection and evaluation"
+    - "Setup and configuration assistance"
+    - "Performance and troubleshooting"
+    
+  data-champions:
+    - "Training materials and resources"
+    - "Certification information"
+    - "Success stories and case studies"
+    - "Community events and workshops"
+    
+  general:
+    - "Industry news and updates"
+    - "Feature requests and suggestions"
+    - "Documentation improvements"
+    - "General Q&A"
+    
+  announcements:
+    - "Official project announcements"
+    - "New releases and updates"
+    - "Community events"
+    - "Maintainers only can post"
+
+# Recommended Tags by Category
+
+tags:
+  pdpa-compliance:
+    - "pdpa-compliance"
+    - "legal-requirements"
+    - "dpo"
+    - "consent-management"
+    - "breach-notification"
+    - "compliance-audit"
+    - "privacy-policy"
+    - "dpia"
+    
+  data-patterns:
+    - "data-pattern"
+    - "nic-pattern"
+    - "bank-account"
+    - "passport"
+    - "mobile-number"
+    - "validation"
+    - "regex"
+    - "pattern-contribution"
+    - "false-positive"
+    
+  dlp-workflow:
+    - "dlp-workflow"
+    - "detection"
+    - "prevention"
+    - "incident-response"
+    - "policy-configuration"
+    - "integration"
+    - "performance"
+    - "automation"
+    - "troubleshooting"
+    - "architecture"
+    
+  implementation-support:
+    - "implementation"
+    - "deployment"
+    - "setup"
+    - "configuration"
+    - "troubleshooting"
+    - "tool-selection"
+    - "migration"
+    
+  data-champions:
+    - "training"
+    - "certification"
+    - "best-practices"
+    - "case-study"
+    - "success-story"
+    - "mentorship"
+    
+  general:
+    - "question"
+    - "discussion"
+    - "feature-request"
+    - "documentation"
+    - "community"
+
+# Usage Instructions:
+# 
+# To create these categories using the GitHub API:
+#
+# 1. Generate a Personal Access Token with 'write:discussion' scope
+# 2. Use the GraphQL API to create categories
+# 3. Example GraphQL mutation:
+#
+#    mutation {
+#      createDiscussionCategory(input: {
+#        repositoryId: "YOUR_REPO_ID",
+#        name: "PDPA Compliance",
+#        emoji: ":shield:",
+#        description: "Discussions about PDPA compliance...",
+#        slug: "pdpa-compliance",
+#        isAnswerable: true
+#      }) {
+#        discussionCategory {
+#          id
+#          name
+#        }
+#      }
+#    }
+#
+# For more information, see:
+# https://docs.github.com/en/graphql/reference/mutations#creatediscussioncategory
